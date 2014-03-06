@@ -1,0 +1,19 @@
+using Catharsis.Commons;
+using FluentNHibernate.Mapping;
+
+namespace Catharsis.Domain.NHibernate
+{
+  /// <summary>
+  ///   <para>NHibernate ORM relational mapping for <see cref="AudiosCategory"/> entity.</para>
+  /// </summary>
+  public sealed class AudiosCategoryMapping : SubclassMap<AudiosCategory>
+  {
+    /// <summary>
+    ///   <para>Creates and setup new mapping.</para>
+    /// </summary>
+    public AudiosCategoryMapping()
+    {
+      this.References(category => category.Parent).Column("ParentId").Index("IX__{0}__ParentId".FormatValue(typeof(Category).Name)).ForeignKey("FK__{0}__{1}".FormatValue(typeof(Category).Name, typeof(Category).Name));
+    }
+  }
+}
