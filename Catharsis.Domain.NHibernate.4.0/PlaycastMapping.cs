@@ -15,7 +15,7 @@ namespace Catharsis.Domain.NHibernate
     {
       this.KeyColumn("Id");
       this.Map(playcast => playcast.Audio).Length(1024);
-      this.References(playcast => playcast.Category).Cascade.All().Column("CategoryId").Fetch.Join().ForeignKey("FK__{0}__{1}".FormatValue(typeof(Playcast).Name, typeof(PlaycastsCategory).Name)).Index("IX__{0}__CategoryId".FormatValue(typeof(Playcast).Name));
+      this.References(playcast => playcast.Category).Cascade.All().Column("CategoryId").Fetch.Join().ForeignKey("FK__{0}__{1}".FormatSelf(typeof(Playcast).Name, typeof(PlaycastsCategory).Name)).Index("IX__{0}__CategoryId".FormatSelf(typeof(Playcast).Name));
       this.Map(playcast => playcast.Image).Length(1024);
     }
   }

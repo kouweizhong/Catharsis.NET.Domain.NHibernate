@@ -14,7 +14,7 @@ namespace Catharsis.Domain.NHibernate
     public ArtsAlbumMapping()
     {
       this.KeyColumn("Id");
-      this.Map(album => album.PublishedOn).Index("IX__{0}__PublishedOn".FormatValue(typeof(ArtsAlbum).Name));
+      this.Map(album => album.PublishedOn).Index("IX__{0}__PublishedOn".FormatSelf(typeof(ArtsAlbum).Name));
     }
   }
 }

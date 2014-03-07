@@ -12,11 +12,11 @@ namespace Catharsis.Domain.NHibernate
     /// </summary>
     public CategoryMapping()
     {
-      this.DiscriminateSubClassesOnColumn("Type").Index("IX__{0}__Type".FormatValue(typeof(Category).Name));
+      this.DiscriminateSubClassesOnColumn("Type").Index("IX__{0}__Type".FormatSelf(typeof(Category).Name));
       this.Cache.ReadWrite();
       this.Map(category => category.Description).Length(short.MaxValue);
-      this.Map(category => category.Language).Index("IX__{0}__Language".FormatValue(typeof(Category).Name)).Length(3);
-      this.Map(category => category.Name).Index("IX__{0}__Name".FormatValue(typeof(Category).Name)).Not.Nullable();
+      this.Map(category => category.Language).Index("IX__{0}__Language".FormatSelf(typeof(Category).Name)).Length(3);
+      this.Map(category => category.Name).Index("IX__{0}__Name".FormatSelf(typeof(Category).Name)).Not.Nullable();
     }
   }
 }

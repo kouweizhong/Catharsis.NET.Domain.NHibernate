@@ -15,7 +15,7 @@ namespace Catharsis.Domain.NHibernate
     protected EntityMapping()
     {
       this.Id(entity => entity.Id).GeneratedBy.Native();
-      this.Version(entity => entity.Version).Check("Version >= 0").Index("IX__{0}__Version".FormatValue(typeof(ENTITY).Name));
+      this.Version(entity => entity.Version).Check("Version >= 0").Index("IX__{0}__Version".FormatSelf(typeof(ENTITY).Name));
     }
   }
 }

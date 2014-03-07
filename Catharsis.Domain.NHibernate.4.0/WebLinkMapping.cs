@@ -14,7 +14,7 @@ namespace Catharsis.Domain.NHibernate
     public WebLinkMapping()
     {
       this.KeyColumn("Id");
-      this.References(weblink => weblink.Category).Cascade.All().Column("CategoryId").Fetch.Join().ForeignKey("FK__{0}__{1}".FormatValue(typeof(WebLink).Name, typeof(WebLinksCategory).Name)).Index("IX__{0}__CategoryId".FormatValue(typeof(WebLink).Name));
+      this.References(weblink => weblink.Category).Cascade.All().Column("CategoryId").Fetch.Join().ForeignKey("FK__{0}__{1}".FormatSelf(typeof(WebLink).Name, typeof(WebLinksCategory).Name)).Index("IX__{0}__CategoryId".FormatSelf(typeof(WebLink).Name));
       this.Map(weblink => weblink.Url).Length(1024).Not.Nullable();
     }
   }

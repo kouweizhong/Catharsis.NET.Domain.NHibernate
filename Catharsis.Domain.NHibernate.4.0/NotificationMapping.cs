@@ -13,9 +13,9 @@ namespace Catharsis.Domain.NHibernate
     public NotificationMapping()
     {
       this.Cache.ReadWrite();
-      this.Map(notification => notification.Language).Index("IX__{0}__Language".FormatValue(typeof(Notification).Name)).Length(3);
+      this.Map(notification => notification.Language).Index("IX__{0}__Language".FormatSelf(typeof(Notification).Name)).Length(3);
       this.Map(notification => notification.Text).Length(short.MaxValue).Not.Nullable();
-      this.Map(notification => notification.Type).Index("IX__{0}__Type".FormatValue(typeof(Notification).Name)).Not.Nullable();
+      this.Map(notification => notification.Type).Index("IX__{0}__Type".FormatSelf(typeof(Notification).Name)).Not.Nullable();
     }
   }
 }

@@ -14,7 +14,7 @@ namespace Catharsis.Domain.NHibernate
     public SongMapping()
     {
       this.KeyColumn("Id");
-      this.References(song => song.Album).Cascade.All().Column("AlbumId").Fetch.Join().ForeignKey("FK__{0}__{1}".FormatValue(typeof(SongsAlbum).Name, typeof(Song).Name)).Index("IX__{0}__AlbumId".FormatValue(typeof(Song).Name));
+      this.References(song => song.Album).Cascade.All().Column("AlbumId").Fetch.Join().ForeignKey("FK__{0}__{1}".FormatSelf(typeof(SongsAlbum).Name, typeof(Song).Name)).Index("IX__{0}__AlbumId".FormatSelf(typeof(Song).Name));
       this.Map(song => song.Audio).Length(1024).Not.Nullable();
     }
   }

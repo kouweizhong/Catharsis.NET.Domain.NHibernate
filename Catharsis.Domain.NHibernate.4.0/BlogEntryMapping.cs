@@ -14,7 +14,7 @@ namespace Catharsis.Domain.NHibernate
     public BlogEntryMapping()
     {
       this.KeyColumn("Id");
-      this.References(entry => entry.Blog).Cascade.All().Column("BlogId").Fetch.Join().ForeignKey("FK__{0}__{1}".FormatValue(typeof(BlogEntry).Name, typeof(Blog).Name)).Index("IX__{0}__BlogId".FormatValue(typeof(BlogEntry).Name)).Not.Nullable();
+      this.References(entry => entry.Blog).Cascade.All().Column("BlogId").Fetch.Join().ForeignKey("FK__{0}__{1}".FormatSelf(typeof(BlogEntry).Name, typeof(Blog).Name)).Index("IX__{0}__BlogId".FormatSelf(typeof(BlogEntry).Name)).Not.Nullable();
     }
   }
 }

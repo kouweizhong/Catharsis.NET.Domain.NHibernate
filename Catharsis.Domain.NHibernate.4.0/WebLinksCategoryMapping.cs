@@ -13,7 +13,7 @@ namespace Catharsis.Domain.NHibernate
     /// </summary>
     public WebLinksCategoryMapping()
     {
-      this.References(category => category.Parent).Column("ParentId").Index("IX__{0}__ParentId".FormatValue(typeof(Category).Name)).ForeignKey("FK__{0}__{1}".FormatValue(typeof(Category).Name, typeof(Category).Name));
+      this.References(category => category.Parent).Column("ParentId").Index("IX__{0}__ParentId".FormatSelf(typeof(Category).Name)).ForeignKey("FK__{0}__{1}".FormatSelf(typeof(Category).Name, typeof(Category).Name));
     }
   }
 }

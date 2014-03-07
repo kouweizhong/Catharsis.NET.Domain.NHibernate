@@ -14,8 +14,8 @@ namespace Catharsis.Domain.NHibernate
     {
       this.Cache.ReadWrite();
       this.Map(country => country.Image).Length(1024);
-      this.Map(country => country.IsoCode).Index("IX__{0}__IsoCode".FormatValue(typeof(Country).Name)).Length(2).Not.Nullable().Unique();
-      this.Map(country => country.Name).Index("IX__{0}__Name".FormatValue(typeof(Country).Name)).Not.Nullable().Unique();
+      this.Map(country => country.IsoCode).Index("IX__{0}__IsoCode".FormatSelf(typeof(Country).Name)).Length(2).Not.Nullable().Unique();
+      this.Map(country => country.Name).Index("IX__{0}__Name".FormatSelf(typeof(Country).Name)).Not.Nullable().Unique();
     }
   }
 }

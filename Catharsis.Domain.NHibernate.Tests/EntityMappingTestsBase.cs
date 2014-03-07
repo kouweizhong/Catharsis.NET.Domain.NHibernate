@@ -25,8 +25,8 @@ namespace Catharsis.Domain.NHibernate
     protected EntityMappingTestsBase()
     {
       this.sessionFactory = Fluently.Configure()
-        .Database(SQLiteConfiguration.Standard.ConnectionString(connection => connection.FromConnectionStringWithKey("SQLite")).ShowSql().FormatSql())
-        //.Database(MsSqlConfiguration.MsSql2008.ConnectionString(connection => connection.FromConnectionStringWithKey("SQLServer")).ShowSql().FormatSql())
+        //.Database(SQLiteConfiguration.Standard.ConnectionString(connection => connection.FromConnectionStringWithKey("SQLite")).ShowSql().FormatSql())
+        .Database(MsSqlConfiguration.MsSql2008.ConnectionString(connection => connection.FromConnectionStringWithKey("SQLServer")).ShowSql().FormatSql())
         //.Database(PostgreSQLConfiguration.Standard.ConnectionString(connection => connection.FromConnectionStringWithKey("PostgreSQL")).ShowSql().FormatSql())
         .Mappings(mappings => mappings.FluentMappings.AddFromAssembly(Assembly.Load("Catharsis.Domain.NHibernate")))
         .ExposeConfiguration(configuration =>

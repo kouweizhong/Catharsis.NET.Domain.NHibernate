@@ -13,7 +13,7 @@ namespace Catharsis.Domain.NHibernate
     public SettingMapping()
     {
       this.Cache.ReadWrite();
-      this.Map(setting => setting.Name).Index("IX__{0}__Name".FormatValue(typeof(Setting).Name)).Not.Nullable().Unique();
+      this.Map(setting => setting.Name).Index("IX__{0}__Name".FormatSelf(typeof(Setting).Name)).Not.Nullable().Unique();
       this.Map(setting => setting.Value).Length(short.MaxValue);
     }
   }
