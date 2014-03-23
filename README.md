@@ -53,3 +53,5 @@ They can be included in your project as described in official FluentNHibernate l
 > .BuildSessionFactory();
 
 NuGet package is also available at : [https://www.nuget.org/packages/Catharsis.Domain.NHibernate](https://www.nuget.org/packages/Catharsis.Domain.NHibernate)
+
+[![Image](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=APHM8MU9N76V8 "Donate")
