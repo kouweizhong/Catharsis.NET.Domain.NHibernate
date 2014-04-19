@@ -15,7 +15,7 @@ namespace Catharsis.Domain.NHibernate
   ///   <para></para>
   /// </summary>
   /// <typeparam name="ENTITY"></typeparam>
-  public abstract class EntityMappingTestsBase<ENTITY> where ENTITY : IEntity
+  public abstract class EntityMappingTestsBase<ENTITY> where ENTITY : class, IEntity
   {
     private readonly ISessionFactory sessionFactory;
 
