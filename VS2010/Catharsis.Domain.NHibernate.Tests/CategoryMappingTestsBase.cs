@@ -13,9 +13,11 @@ namespace Catharsis.Domain.NHibernate
     {
       Assertion.NotNull(specification);
 
-      specification.CheckProperty(category => category.Description, "description");
-      specification.CheckProperty(category => category.Language, "ru");
-      specification.CheckProperty(category => category.Name, "name");
+      specification.CheckProperty(mapping => mapping.Id, (long) 1);
+      specification.CheckProperty(mapping => mapping.Version, (long) 1);
+      specification.CheckProperty(mapping => mapping.Description, "description");
+      specification.CheckProperty(mapping => mapping.Language, "ru");
+      specification.CheckProperty(mapping => mapping.Name, "name");
     }
   }
 }

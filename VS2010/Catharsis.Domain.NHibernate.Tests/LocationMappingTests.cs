@@ -17,6 +17,8 @@ namespace Catharsis.Domain.NHibernate
       specification.TransactionalSave(country);
       specification.TransactionalSave(city);
 
+      specification.CheckProperty(mapping => mapping.Id, (long) 1);
+      specification.CheckProperty(mapping => mapping.Version, (long) 1);
       specification.CheckProperty(mapping => mapping.Address, "address");
       specification.CheckReference(mapping => mapping.City, city);
       specification.CheckProperty(mapping => mapping.Latitude, (decimal) 90);

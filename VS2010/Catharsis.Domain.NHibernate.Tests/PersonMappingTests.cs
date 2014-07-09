@@ -12,6 +12,8 @@ namespace Catharsis.Domain.NHibernate
     {
       Assertion.NotNull(specification);
 
+      specification.CheckProperty(mapping => mapping.Id, (long) 1);
+      specification.CheckProperty(mapping => mapping.Version, (long) 1);
       specification.CheckProperty(mapping => mapping.BirthDay, (byte) 1);
       specification.CheckProperty(mapping => mapping.BirthMonth, (byte) 12);
       specification.CheckProperty(mapping => mapping.BirthYear, (short) 2000);

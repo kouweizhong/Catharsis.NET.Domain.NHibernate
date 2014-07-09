@@ -15,6 +15,8 @@ namespace Catharsis.Domain.NHibernate
       var category = new VideosCategory("category.name");
       specification.TransactionalSave(category);
 
+      specification.CheckProperty(mapping => mapping.Id, (long) 1);
+      specification.CheckProperty(mapping => mapping.Version, (long) 1);
       specification.CheckProperty(mapping => mapping.Bitrate, (short) 16);
       specification.CheckReference(mapping => mapping.Category, category);
       specification.CheckProperty(mapping => mapping.Duration, (long) 10);

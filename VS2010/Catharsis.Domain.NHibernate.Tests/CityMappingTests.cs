@@ -14,7 +14,9 @@ namespace Catharsis.Domain.NHibernate
 
       var country =  new Country("country.name", "ru");
       specification.TransactionalSave(country);
-      
+
+      specification.CheckProperty(mapping => mapping.Id, (long) 1);
+      specification.CheckProperty(mapping => mapping.Version, (long) 1);
       specification.CheckReference(mapping => mapping.Country, country);
       specification.CheckProperty(mapping => mapping.Name, "name");
       specification.CheckProperty(mapping => mapping.Region, "region");

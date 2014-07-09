@@ -13,6 +13,8 @@ namespace Catharsis.Domain.NHibernate
     {
       Assertion.NotNull(specification);
 
+      specification.CheckProperty(mapping => mapping.Id, (long) 1);
+      specification.CheckProperty(mapping => mapping.Version, (long) 1);
       specification.CheckProperty(mapping => mapping.DateCreated, DateTime.UtcNow);
       specification.CheckProperty(mapping => mapping.LastUpdated, DateTime.UtcNow);
       specification.CheckProperty(mapping => mapping.Name, "name");

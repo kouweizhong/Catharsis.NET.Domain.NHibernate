@@ -32,13 +32,19 @@
     <DocumentationFile>bin\Release\Catharsis.Domain.NHibernate.Tests.XML</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Catharsis.Commons, Version=2.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Catharsis.Commons, Version=2.6.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Catharsis.Commons.2.5\lib\net40\Catharsis.Commons.dll</HintPath>
+      <HintPath>..\packages\Catharsis.Commons.2.6.1\lib\net40\Catharsis.Commons.dll</HintPath>
     </Reference>
-    <Reference Include="Catharsis.Domain, Version=2.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Catharsis.Domain, Version=2.3.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Catharsis.Domain.2.2\lib\net40\Catharsis.Domain.dll</HintPath>
+      <HintPath>..\packages\Catharsis.Domain.2.3\lib\net40\Catharsis.Domain.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net40\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="FluentNHibernate, Version=1.4.0.0, Culture=neutral, PublicKeyToken=8aa435e3cb308880, processorArchitecture=MSIL">
       <HintPath>..\packages\FluentNHibernate.1.4.0.0\lib\net35\FluentNHibernate.dll</HintPath>
@@ -53,15 +59,19 @@
       <HintPath>..\packages\NHibernate.3.3.3.4001\lib\Net35\NHibernate.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Data.SQLite">
-      <HintPath>..\packages\System.Data.SQLite.Core.1.0.92.0\lib\net40\System.Data.SQLite.dll</HintPath>
+    <Reference Include="System.Data.SQLite, Version=1.0.93.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\System.Data.SQLite.Core.1.0.93.0\lib\net40\System.Data.SQLite.dll</HintPath>
     </Reference>
-    <Reference Include="System.Data.SQLite.EF6, Version=1.0.92.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Data.SQLite.EF6.1.0.92.0\lib\net40\System.Data.SQLite.EF6.dll</HintPath>
+    <Reference Include="System.Data.SQLite.EF6, Version=1.0.93.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\System.Data.SQLite.EF6.1.0.93.0\lib\net40\System.Data.SQLite.EF6.dll</HintPath>
     </Reference>
-    <Reference Include="System.Data.SQLite.Linq, Version=1.0.92.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Data.SQLite.Linq.1.0.92.0\lib\net40\System.Data.SQLite.Linq.dll</HintPath>
+    <Reference Include="System.Data.SQLite.Linq, Version=1.0.93.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\System.Data.SQLite.Linq.1.0.93.0\lib\net40\System.Data.SQLite.Linq.dll</HintPath>
     </Reference>
     <Reference Include="System.XML" />
     <Reference Include="xunit">
@@ -110,12 +120,6 @@
     <Compile Include="WebLinksCategoryMappingTests.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Catharsis.Domain.NHibernate.4.0\Catharsis.Domain.NHibernate.4.0.csproj">
-      <Project>{DFB10DFB-27C9-41E6-9B1A-CF29C94EBD06}</Project>
-      <Name>Catharsis.Domain.NHibernate.4.0</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
@@ -126,6 +130,12 @@
     <Content Include="x86\SQLite.Interop.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Catharsis.Domain.NHibernate.4.0\Catharsis.Domain.NHibernate.4.0.csproj">
+      <Project>{DFB10DFB-27C9-41E6-9B1A-CF29C94EBD06}</Project>
+      <Name>Catharsis.Domain.NHibernate.4.0</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

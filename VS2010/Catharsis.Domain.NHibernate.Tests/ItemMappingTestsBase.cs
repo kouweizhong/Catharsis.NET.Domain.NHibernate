@@ -16,6 +16,8 @@ namespace Catharsis.Domain.NHibernate
       var comment = new Comment("comment.name", "comment.text");
       specification.TransactionalSave(comment);
 
+      specification.CheckProperty(mapping => mapping.Id, (long) 1);
+      specification.CheckProperty(mapping => mapping.Version, (long) 1);
       specification.CheckInverseBag(mapping => mapping.Comments, new[] { comment });
       specification.CheckProperty(mapping => mapping.DateCreated, DateTime.UtcNow);
       specification.CheckProperty(mapping => mapping.Language, "ru");

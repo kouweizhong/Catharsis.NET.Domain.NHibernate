@@ -45,8 +45,6 @@ namespace Catharsis.Domain.NHibernate
       using (var session = this.sessionFactory.OpenSession())
       {
         var specification = new PersistenceSpecification<ENTITY>(session, new EqualityComparer());
-        specification.CheckProperty(mapping => mapping.Id, (long)1);
-        specification.CheckProperty(mapping => mapping.Version, (long)1);
         this.TestMappings(specification);
         specification.VerifyTheMappings();
       }
