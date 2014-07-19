@@ -32,13 +32,13 @@
     <DocumentationFile>bin\Release\Catharsis.Domain.NHibernate.Tests.XML</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Catharsis.Commons, Version=2.6.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Catharsis.Commons, Version=2.7.5.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Catharsis.Commons.2.6.1\lib\net40\Catharsis.Commons.dll</HintPath>
+      <HintPath>..\packages\Catharsis.Commons.2.7.5\lib\net40\Catharsis.Commons.dll</HintPath>
     </Reference>
-    <Reference Include="Catharsis.Domain, Version=2.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Catharsis.Domain, Version=2.4.1.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Catharsis.Domain.2.3\lib\net40\Catharsis.Domain.dll</HintPath>
+      <HintPath>..\packages\Catharsis.Domain.2.4.1\lib\net40\Catharsis.Domain.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework">
       <HintPath>..\packages\EntityFramework.6.1.1\lib\net40\EntityFramework.dll</HintPath>

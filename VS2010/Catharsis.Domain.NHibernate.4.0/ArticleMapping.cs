@@ -14,9 +14,9 @@ namespace Catharsis.Domain.NHibernate
     public ArticleMapping()
     {
       this.KeyColumn("Id");
-      this.Map(annotation => annotation.Annotation).Length(short.MaxValue);
-      this.References(annotation => annotation.Category).Cascade.All().Column("CategoryId").Fetch.Join().ForeignKey("FK__{0}__{1}".FormatSelf(typeof(Article).Name, typeof(ArticlesCategory).Name)).Index("IX__{0}__CategoryId".FormatSelf(typeof(Article).Name));
-      this.Map(annotation => annotation.Image).Length(1024);
+      this.Map(article => article.Annotation).Length(short.MaxValue);
+      this.References(article => article.Category).Cascade.All().Column("CategoryId").Fetch.Join().ForeignKey("FK__{0}__{1}".FormatSelf(typeof(Article).Name, typeof(ArticlesCategory).Name)).Index("IX__{0}__CategoryId".FormatSelf(typeof(Article).Name));
+      this.Map(article => article.Image).Length(1024);
     }
   }
 }

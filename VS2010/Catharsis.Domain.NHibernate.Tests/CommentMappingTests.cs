@@ -15,8 +15,8 @@ namespace Catharsis.Domain.NHibernate
 
       specification.CheckProperty(mapping => mapping.Id, (long) 1);
       specification.CheckProperty(mapping => mapping.Version, (long) 1);
-      specification.CheckProperty(mapping => mapping.DateCreated, DateTime.UtcNow);
-      specification.CheckProperty(mapping => mapping.LastUpdated, DateTime.UtcNow);
+      specification.CheckProperty(mapping => mapping.CreatedAt, DateTime.UtcNow);
+      specification.CheckProperty(mapping => mapping.UpdatedAt, DateTime.UtcNow);
       specification.CheckProperty(mapping => mapping.Name, "name");
       specification.CheckProperty(mapping => mapping.Text, "text");
     }

@@ -16,10 +16,10 @@ namespace Catharsis.Domain.NHibernate
       specification.CheckProperty(mapping => mapping.Id, (long) 1);
       specification.CheckProperty(mapping => mapping.Version, (long) 1);
       specification.CheckProperty(mapping => mapping.Active, true);
-      specification.CheckProperty(mapping => mapping.DateCreated, DateTime.UtcNow);
+      specification.CheckProperty(mapping => mapping.CreatedAt, DateTime.UtcNow);
       specification.CheckProperty(mapping => mapping.Email, "email");
-      specification.CheckProperty(mapping => mapping.ExpiredOn, DateTime.UtcNow);
-      specification.CheckProperty(mapping => mapping.LastUpdated, DateTime.UtcNow);
+      specification.CheckProperty(mapping => mapping.ExpiredAt, DateTime.UtcNow);
+      specification.CheckProperty(mapping => mapping.UpdatedAt, DateTime.UtcNow);
       specification.CheckProperty(mapping => mapping.Token, "token");
     }
   }

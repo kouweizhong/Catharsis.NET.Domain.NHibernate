@@ -12,9 +12,9 @@ namespace Catharsis.Domain.NHibernate
     /// </summary>
     public CommentMapping()
     {
-      this.CheckConstraint("DateCreated <= LastUpdated");
-      this.Map(comment => comment.DateCreated).Index("IX__{0}__DateCreated".FormatSelf(typeof(Comment).Name)).Not.Nullable();
-      this.Map(comment => comment.LastUpdated).Index("IX__{0}__LastUpdated".FormatSelf(typeof(Comment).Name)).Not.Nullable();
+      this.CheckConstraint("CreatedAt <= UpdatedAt");
+      this.Map(comment => comment.CreatedAt).Index("IX__{0}__CreatedAt".FormatSelf(typeof(Comment).Name)).Not.Nullable();
+      this.Map(comment => comment.UpdatedAt).Index("IX__{0}__UpdatedAt".FormatSelf(typeof(Comment).Name)).Not.Nullable();
       this.Map(comment => comment.Name).Index("IX__{0}__Name".FormatSelf(typeof(Comment).Name)).Not.Nullable();
       this.Map(comment => comment.Text).Length(short.MaxValue).Not.Nullable();
     }
