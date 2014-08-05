@@ -1,0 +1,4 @@
+var class_catharsis_1_1_domain_1_1_n_hibernate_1_1_notification_mapping =
+[
+    [ "NotificationMapping", "class_catharsis_1_1_domain_1_1_n_hibernate_1_1_notification_mapping.html#a973d47939963a93f08f0085a2dd119ce", null ]
+];

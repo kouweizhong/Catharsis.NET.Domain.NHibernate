@@ -12,7 +12,7 @@ namespace Catharsis.Domain.NHibernate
     /// </summary>
     public ProfileMapping()
     {
-      this.Map(profile => profile.Email).Index("IX__{0}__Email".FormatSelf(typeof(Profile).Name)).Not.Nullable();
+      this.Map(profile => profile.Email).Index("IX__{0}__Email".FormatSelf(typeof(Profile).Name));
       this.Map(profile => profile.Name).Index("IX__{0}__Name".FormatSelf(typeof(Profile).Name)).Not.Nullable();
       this.Map(profile => profile.Photo).Length(1024);
       this.Map(profile => profile.Type).Index("IX__{0}__Type".FormatSelf(typeof(Profile).Name)).Not.Nullable();
